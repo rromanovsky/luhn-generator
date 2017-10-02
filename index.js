@@ -18,9 +18,7 @@ function checksum(input) {
 
 function generate(input, inputOptions) {
   var string = input.toString();
-  var options = {
-    pad: 0,
-  };
+  var options = { pad: 0 };
 
   if (typeof inputOptions !== 'undefined') {
     if (typeof inputOptions.pad !== 'undefined') options.pad = inputOptions.pad;
