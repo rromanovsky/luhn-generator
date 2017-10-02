@@ -1,7 +1,7 @@
 {
   "name": "luhn-generator",
   "description": "A generator of numbers that passes the checksum of Luhn algorithm or Luhn formula, also known as the 'modulus 10' or 'mod 10' algorithm",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Roman Romanovsky <rrrrromanovsky@gmail.com>",
   "homepage": "https://github.com/rromanovsky/luhn-generator",
   "repository": {

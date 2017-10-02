@@ -21,8 +21,14 @@ luhn.generate({ number: 1 }); // 18
 luhn.generate({ number: 1, pad: 5 }); // 00018
 ```
 
+Validate number with Luhn algorithm:
+```js
+luhn.validate(18); // true
+```
+
 ## To Do
 
 - Tests
 - `validate` function
 - Add hash function support for `generate` function
+- Page with examples
