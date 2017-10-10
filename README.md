@@ -1,5 +1,5 @@
 # Luhn Generator
-A generator of numbers that passes the checksum of Luhn algorithm or Luhn formula, also known as the "modulus 10" or "mod 10" algorithm
+A generator of numbers that passes the validation of Luhn algorithm or Luhn formula, also known as the "modulus 10" or "mod 10" algorithm
 
 ```
 npm install luhn-generator --save
@@ -29,6 +29,7 @@ luhn.validate(18); // true
 
 ## To Do
 
-- Tests
-- Add hash function support for `generate` function
-- Page with examples
+- Add examples for CommonJS, AMD, Script tag
+- Add page with examples
+- Add card number generation
+
