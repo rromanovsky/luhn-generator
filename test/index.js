@@ -18,6 +18,11 @@ describe('generate', () => {
   it('Should be 00125', () => assert.equal(luhn.generate(12, { pad: 5 }), '00125'));
 });
 
+describe('random', () => {
+  it('Should be 12', () => assert.equal(luhn.random(12).length, 12));
+  it('Should be 50', () => assert.equal(luhn.random(12, { pad: 50 }).length, 50));
+});
+
 describe('validate', () => {
   it('Should be true', () => assert.equal(luhn.validate(18), true));
   it('Should be true', () => assert.equal(luhn.validate(125), true));
