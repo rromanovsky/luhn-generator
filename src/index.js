@@ -34,7 +34,7 @@ export default {
     return string + this.checksum(string);
   },
 
-  random(length, options) {
+  random(input, inputOptions) {
     function getRandomStringOfNumbers(length) {
       let randomStringOfNumbers = '';
 
@@ -51,7 +51,7 @@ export default {
       return randomStringOfNumbers;
     }
 
-    return this.generate(getRandomStringOfNumbers(length), options);
+    return this.generate(getRandomStringOfNumbers(input - 1), inputOptions);
   },
 
   validate(input) {
