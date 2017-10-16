@@ -1,5 +1,5 @@
-import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import path from 'path';
+import webpack from 'webpack';
 
 export default {
   entry: './src/index.js',
@@ -10,7 +10,6 @@ export default {
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
-  plugins: [
-    new UglifyJSPlugin(),
-  ],
+  module: { rules: [{ use: 'babel-loader', test: /\.js$/, exclude: /node_modules/ }] },
+  plugins: [new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })],
 };

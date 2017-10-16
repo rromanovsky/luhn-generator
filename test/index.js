@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { describe, it } from 'mocha';
-import luhn from '../src';
+import luhn from '../dist/luhn.min';
 
 describe('checksum', () => {
   it('Should be 8', () => assert.equal(luhn.checksum(1), 8));
