@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   checksum(input) {
     const string = input.toString();
     let sum = 0;

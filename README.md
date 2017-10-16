@@ -6,9 +6,44 @@ npm install luhn-generator --save
 ```
 
 ## Usage
-```js
-import luhn from 'luhn-generator';
-```
+
+- ECMAScript Harmony
+    ```js
+    import luhn from '../dist/luhn.min';
+    luhn.generate(1, { pad: 12 }); // 000000000018
+    ```
+- CommonJS
+    ```js
+    $ node
+    > const luhn = require('../dist/luhn.min');
+    > luhn.generate(1, { pad: 12 }); // 000000000018
+    ```
+- AMD
+    ```html
+    <!-- amd.html -->
+    <html>
+      <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+        <script>
+          window.requirejs(['dist/luhn.min'], function(luhn) {
+            console.log(luhn.generate(1, { pad: 12 })); // 000000000018
+          });
+        </script>
+      </body>
+    </html>
+    ```
+- Script Tag
+    ```html
+    <!-- script-tag.html -->
+    <html>
+      <body>
+        <script src="./dist/luhn.min.js"></script>
+        <script>
+          console.log(luhn.generate(1, { pad: 12 })); // 000000000018
+        </script>
+      </body>
+    </html>
+    ```
 
 Generate Luhn "check digit" for number `1`:
 ```js
@@ -39,6 +74,5 @@ luhn.validate(125); // true
 
 ## To Do
 
-- Add examples for CommonJS, AMD, Script tag
 - Add page with examples
 - Add card number generation
