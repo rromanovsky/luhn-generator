@@ -2,14 +2,23 @@ import path from 'path';
 import webpack from 'webpack';
 
 export default {
-  entry: './src/index.js',
+  entry: {
+    'luhn': './src/index.js',
+    'luhn.min': './src/index.js',
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'luhn.min.js',
+    filename: '[name].js',
     library: 'luhn',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
   module: { rules: [{ use: 'babel-loader', test: /\.js$/, exclude: /node_modules/ }] },
-  plugins: [new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })],
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      compress: { warnings: false },
+      minimize: true,
+    }),
+  ],
 };
