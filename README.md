@@ -9,13 +9,13 @@ npm install luhn-generator --save
 
 - ECMAScript Harmony
     ```js
-    import luhn from '../dist/luhn.min';
+    import luhn from '../dist/luhn';
     luhn.generate(1, { pad: 12 }); // 000000000018
     ```
 - CommonJS
     ```js
     $ node
-    > const luhn = require('../dist/luhn.min');
+    > const luhn = require('../dist/luhn');
     > luhn.generate(1, { pad: 12 }); // 000000000018
     ```
 - AMD
