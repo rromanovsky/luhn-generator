@@ -136,7 +136,7 @@ module.exports = {
     return this.generate(getRandomStringOfNumbers(input - 1), inputOptions);
   },
   validate: function validate(input) {
-    return this.checksum(input.toString().slice(0, -1)) === parseInt(input % 10);
+    return this.checksum(input.toString().slice(0, -1)) === parseInt(input.toString().slice(-1));
   }
 };
 

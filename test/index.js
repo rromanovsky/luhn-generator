@@ -32,4 +32,6 @@ describe('validate', () => {
   it('Should be true', () => assert.equal(luhn.validate(31000235), true));
   it('Should be true', () => assert.equal(luhn.validate(31112220), true));
   it('Should be true', () => assert.equal(luhn.validate(39876537), true));
+  it('Should be true', () => assert.equal(luhn.validate('54833184596638864915195736286128781213916608803535'), true));
+  it('Should be true', () => assert.equal(luhn.validate('6885184926605792519681265660993336909501776690971634381082359845897424816619457899445269185955425209'), true));
 });
