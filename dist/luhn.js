@@ -7,7 +7,7 @@
 		exports["luhn"] = factory();
 	else
 		root["luhn"] = factory();
-})(typeof self !== 'undefined' ? self : this, function() {
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
